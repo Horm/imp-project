@@ -1,0 +1,26 @@
+/**
+ * CSS for Web APP
+ * @author Matej Horak (xhorak68) - 100%
+ * @date 30.12.2018
+ **/
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.brand-logo {
+    padding-left: 12px !important;
+}

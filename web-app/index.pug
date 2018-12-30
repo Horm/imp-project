@@ -1,0 +1,75 @@
+doctype html
+//
+    PUG for Web App (it generates HTML)...
+    @author Matej Horak (xhorak68) - 100%
+    @date 30.12.2018
+html(lang='en')
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+        title LED
+        // CSS
+        link(href='css/icon.css', rel='stylesheet')
+        link(href='css/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+        link(href='css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+    body
+        header
+            nav.nav-extended
+                .nav-wrapper
+                    a.brand-logo(href='#')  LED
+                .nav-content
+                    ul.tabs.tabs-transparent
+                        li.tab
+                            a.active(href='#normal') Normal
+                        li.tab
+                            a(href='#traffic') Traffic
+                        li.tab
+                            a(href='#effect') Effect
+        main
+
+            #normal
+                .section
+                    .container.center
+                        p In this mode you can directly control each LED by these buttons...
+                        .row
+                            a.btn.grey(onclick='switchRed()')#red-switch Red
+                        .row
+                            a.btn.orange(onclick='switchOrange()')#orange-switch Orange
+                        .row
+                            a.btn.green(onclick='switchGreen()')#green-switch Green
+            #traffic
+                .section
+                    .container.center
+                        p In this mode you can control the traffic...
+                        h2#traffic-status Traffic: On
+                        .row
+                            a.btn.disabled(onclick='trafficOn()')#traffic-on On
+                        .row
+                            a.btn(onclick='trafficOff()')#traffic-off Off
+            #effect
+                .section
+                    .container.center
+                        p In this mode you can use LED for some effects...
+                        .row
+                            a.btn(onclick='runEffect(1)') Effect #1
+                        .row
+                            a.btn(onclick='runEffect(2)') Effect #2
+                        .row
+                            a.btn(onclick='runEffect(3)') Effect #3
+
+
+
+
+
+        footer.page-footer
+            .container
+                .row
+                    p This web app is for university project in IMP at BUT FIT...
+            .footer-copyright
+                .container
+                    | Made by xhorak68
+        // Scripts
+        script(src='js/jquery-2.1.1.min.js')
+        script(src="js/axios.min.js")
+        script(src='js/materialize.js')
+        script(src='js/init.js')
