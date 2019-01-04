@@ -1,5 +1,7 @@
 # IMP Project
 
+This project was created at BUT FIT in course Microprocessors and Embedded Systems. 
+
 # Setup
 
 1. Install Arduino IDE
